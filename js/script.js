@@ -1,17 +1,22 @@
-// // Esercizio Email
-// // Chiediamo agli utenti la loro email
+// Esercizio Email.
+// Chiediamo agli utenti la loro email.
+
 alert("CONVALIDA LA TUA EMAIL PER EFFETTUARE L'ACCESSO !");
 var emailUtenti = prompt("Inserisci la tua Email");
-// creiamo la lista
-var listaEmail = ["mattia@gmail.com", "miaemail@gmail.com", "sabrina@gmail.com", "stefano@gmail.com", "lara@gmail.com", "francesco@gmail.com" ];
+
+// creiamo la lista.
+
+var listaEmail = ["mattia@gmail.com", "miaemail@gmail.com", "sabrina@gmail.com", "stefano@gmail.com", "lara@gmail.com", "francesco@gmail.com"];
 var listaCheck = false;
+
+// L'email scritta nel prompt deve essere uguale ad una delle email della listaEmail, se corrisponde,
+// verrà effettuato l'accesso altrimenti non funzionerà.
+
 for (var i = 0; i < listaEmail.length; i++) {
-    if (listaEmail[i] === "miaemail@gmail.com") {
+    if (listaEmail[i] === emailUtenti) {
         listaCheck = true;
-        break;
     }
 }
-
 if (listaCheck) {
     alert("EMAIL CONFERMATA");
     document.getElementById("email").innerHTML = "ACCESSO EFFETTUATO";
@@ -20,9 +25,7 @@ if (listaCheck) {
     document.getElementById("email").innerHTML = "ACCESSO NON EFFETTUATO";
 }
 
-
-
-// Esercizio Dadi
+// Esercizio Dadi.
 
 var numeroUtente = Math.floor(Math.random() * 6);
 document.getElementById("utente").innerHTML = numeroUtente + ": Risultato lancio dadi Utente.";
